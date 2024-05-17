@@ -1,5 +1,22 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Scanner scanner = new Scanner(System.in);
+
+        // Get package weight
+        double packageWeight;
+        while (true) {
+            System.out.println("Please enter package weight:");
+            try {
+                packageWeight = Double.parseDouble(scanner.nextLine());
+                break;
+            } catch (Exception e) {
+                System.err.println("Invalid package weight");
+            }
+        }
+
+        StatusNotifier statusNotifier = new StatusNotifier(packageWeight);
+        statusNotifier.run();
     }
 }
