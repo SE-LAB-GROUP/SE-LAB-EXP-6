@@ -150,4 +150,25 @@ This is a behavioral pattern. It is used here to manage the state of the package
 
 
 ## 3. Suitable Design Pattern for Single Package Creation
-Given that we only have one package in each execution and no other packages are present, the <b>Singleton<b> Pattern is appropriate for creating and managing the package instance. The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.
+Given that we only have one package in each execution and no other packages are present, the Singleton Pattern is appropriate for creating and managing the package instance. The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.
+
+
+## 4. State whether or not SOLID principles are achieved in the Singleton design pattern
+### 1. Single Responsibility Principle (SRP):
+Partially Achieved: The Singleton pattern ensures a single instance, but if the class also handles other responsibilities beyond instance control, it can violate SRP. A Singleton should focus solely on instance management to adhere to SRP.
+
+
+### 2. Open/Closed Principle (OCP):
+Not Achieved: Singleton classes are not easily extendable. Changes to how the instance is created or managed require modification of the class itself, thus not being open for extension but closed for modification.
+
+
+### 3. Liskov Substitution Principle (LSP):
+Achieved: Singleton adheres to LSP as long as it correctly implements an interface or base class. Substituting the Singleton for its base type should not affect the program's correctness.
+
+
+### 4. Interface Segregation Principle (ISP):
+Not Directly Relevant: ISP concerns the design of interfaces rather than the instantiation patterns. Singleton pattern itself does not directly impact how interfaces are designed or used.
+
+
+### 5. Dependency Inversion Principle (DIP):
+Not Achieved: Singletons can lead to tight coupling because classes directly depend on the Singleton instance. Using dependency injection can help mitigate this issue, but the Singleton pattern itself does not promote DIP.
