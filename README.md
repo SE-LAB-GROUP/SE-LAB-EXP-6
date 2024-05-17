@@ -1,5 +1,8 @@
 
 # Report
+Here is the report of the Experiment-6 Project for implementing the State and Strategy design patterns for a delivery status program.
+
+
 ## TDD Tests
 We are using TDD (Test Driven Development) in this project so first of all we need to implement the test files and run the tests which we should fail all of them because we have not yet written the code for the project.
 
@@ -53,3 +56,98 @@ The StatusNotifier class changes its behavior based on the current state of pack
 This pattern allows StatusNotifier to change its behavior based on the package status, such as continuing to prompt the user until the package is delivered.
 ![image](https://github.com/SE-LAB-GROUP/SE-LAB-EXP-6/assets/79265257/d84f5bbf-c51b-4942-be49-581cfb3e7a58)
 ![image](https://github.com/SE-LAB-GROUP/SE-LAB-EXP-6/assets/79265257/cf972f6b-0eb2-4b63-939f-5554ed4ebcc7)
+
+
+# Questions
+## 1. Name and describe each of the three categories of design patterns introduced in the GoF book
+
+
+### 1. Creational Patterns:
+The design patterns that deal with the creation of an object. These patterns provide various mechanisms to create objects, increasing the flexibility and reuse of existing code.
+
+
+There are 5 design patterns in the creational design patterns category.
+
+
+#### Singleton
+The singleton pattern restricts the initialization of a class to ensure that only one instance of the class can be created.
+#### Factory
+The factory pattern takes out the responsibility of instantiating a object from the class to a Factory class.
+#### Abstract
+Factory	Allows us to create a Factory for factory classes.
+#### Builder
+Creating an object step by step and a method to finally get the object instance.
+#### Prototype
+Creating a new object instance from another similar instance and then modify according to our requirements.
+
+
+### 2. Structural Patterns:
+The design patterns in this category deals with the class structure such as Inheritance and Composition.
+These patterns deal with object composition, simplifying the structure by identifying the relationships between objects.
+
+There are 7 structural design patterns defined in the Gangs of Four design patterns book.
+
+
+#### Adapter
+Provides an interface between two unrelated entities so that they can work together.
+#### Composite
+Used when we have to implement a part-whole hierarchy. For example, a diagram made of other pieces such as circle, square, triangle, etc.
+#### Proxy
+Provide a surrogate or placeholder for another object to control access to it.
+#### Flyweight
+Caching and reusing object instances, used with immutable objects. For example, string pool.
+#### Facade	
+Creating a wrapper interfaces on top of existing interfaces to help client applications.
+#### Bridge
+The bridge design pattern is used to decouple the interfaces from implementation and hiding the implementation details from the client program.
+#### Decorator
+The decorator design pattern is used to modify the functionality of an object at runtime.
+
+### 3. Behavioral Patterns:
+This type of design patterns provide solution for the better interaction between objects, how to provide lose coupling, and flexibility to extend easily in future.
+These patterns focus on communication between objects, ensuring flexible and efficient interactions.
+
+There are 11 behavioral design patterns defined in the GoF design patterns.
+
+#### Template Method
+used to create a template method stub and defer some of the steps of implementation to the subclasses.
+#### Mediator
+used to provide a centralized communication medium between different objects in a system.
+#### Chain of Responsibility	
+used to achieve loose coupling in software design where a request from the client is passed to a chain of objects to process them.
+#### Observer
+useful when you are interested in the state of an object and want to get notified whenever there is any change.
+#### Strategy	
+Strategy pattern is used when we have multiple algorithm for a specific task and client decides the actual implementation to be used at runtime.
+#### Command	
+Command Pattern is used to implement lose coupling in a request-response model.
+#### State
+State design pattern is used when an Object change it’s behavior based on it’s internal state.
+#### Visitor
+Visitor pattern is used when we have to perform an operation on a group of similar kind of Objects.
+#### Interpreter	
+defines a grammatical representation for a language and provides an interpreter to deal with this grammar.
+#### Iterator
+used to provide a standard way to traverse through a group of Objects.
+#### Memento
+The memento design pattern is used when we want to save the state of an object so that we can restore later on.
+
+
+### Conclusion
+Gangs of Four design patterns lay the foundation of core design patterns in programming. There are many other design patterns built on top of these patterns for specific requirements.
+
+
+## 2. Patterns used in This Project
+The patterns used in this project are: 
+
+
+### Strategy Pattern:
+This is a behavioral pattern. It is used here to define a family of shipping algorithms (Standard and Express shipping) and make them interchangeable.
+
+
+### State Pattern:
+This is a behavioral pattern. It is used here to manage the state of the package (in transit or delivered) and alter behavior based on the state.
+
+
+## 3. Suitable Design Pattern for Single Package Creation
+Given that we only have one package in each execution and no other packages are present, the <b>Singleton<b> Pattern is appropriate for creating and managing the package instance. The Singleton pattern ensures that a class has only one instance and provides a global point of access to it.
